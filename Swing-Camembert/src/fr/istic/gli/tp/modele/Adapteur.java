@@ -6,7 +6,7 @@ import fr.istic.gli.tp.observateur.Observable;
 
 public class Adapteur extends Observable implements IModel{
   private Model model;
-  
+
   public Adapteur(Model model) {
     super();
     this.model = model;
@@ -15,13 +15,13 @@ public class Adapteur extends Observable implements IModel{
   @Override
   public void addItem(Item i) {
     model.addItem(i);
-    this.notifierObservateurs();
+    this.notifierObservateurs("all");
   }
 
   @Override
   public void removeItem(Item i) {
-   model.removeItem(i);
-   this.notifierObservateurs();
+    model.removeItem(i);
+    this.notifierObservateurs("all");
   }
 
   @Override
@@ -32,7 +32,7 @@ public class Adapteur extends Observable implements IModel{
   @Override
   public void setTitre(String titre) {
     model.setTitre(titre);
-    this.notifierObservateurs();
+    this.notifierObservateurs("all");
   }
 
   @Override
@@ -41,8 +41,18 @@ public class Adapteur extends Observable implements IModel{
   }
 
   @Override
-  public int getBudget() {
-    return model.getBudget();
+  public void changementTable(Item i, String action){
+    if(action.equals("remove")){
+      model.removeItem(i);
+      this.notifierObservateurs("all");
+    }
+    else if (action.equals("add")){
+      model.addItem(i);
+      this.notifierObservateurs("all");
+    }
+    else if (action.equals("update"))
+      this.notifierObservateurs("");
+
   }
 
 }

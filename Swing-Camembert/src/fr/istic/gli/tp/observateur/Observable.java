@@ -11,16 +11,16 @@ public class Observable {
     lesobservateurs = new ArrayList<IObservateur>();
   }
   
-  public void notifierObservateurs() {
+  public void notifierObservateurs(String action) {
     for(IObservateur i : lesobservateurs)
-      i.notifier();
+      i.notifier(action);
   }
 
   public void ajouterObservateur(IObservateur observateur){
     lesobservateurs.add(observateur);
   }
 
-  void supprimerObservateur(IObservateur observateur){ 
+  public void supprimerObservateur(IObservateur observateur){ 
     lesobservateurs.remove(observateur);
   }
 }

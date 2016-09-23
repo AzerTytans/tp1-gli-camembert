@@ -124,7 +124,7 @@ public class Camembert extends JComponent implements MouseListener, IObservateur
     g.setColor(Color.BLACK);
     g.drawString("Budget", 180, 240);
     g.drawString(""+totale, 180, 260);
-    
+
     if(num_seg != -1){
       g.setColor(Color.YELLOW);
       g.fillRect(20, 20, 360, 85);
@@ -186,7 +186,11 @@ public class Camembert extends JComponent implements MouseListener, IObservateur
   }
 
   @Override
-  public void notifier() {
+  public void notifier(String action) {
+    if (action.equals("all")){
+      init();
+    }
+    initCamembert();
     repaint();
   }
 

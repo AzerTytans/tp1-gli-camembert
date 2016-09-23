@@ -3,15 +3,15 @@ package fr.istic.gli.tp.modele;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.table.AbstractTableModel;
+
 public class Model{
   private String titre;
-  private int budget;
   private List<Item> lesitems;
-  
-  public Model(String titre, int budget) {
+
+  public Model(String titre) {
     super();
     this.titre = titre;
-    this.budget = budget;
     lesitems = new ArrayList<Item>();
   }
   
@@ -34,8 +34,5 @@ public class Model{
   public String getTitre() {
     return this.titre;
   }
-  
-  public int getBudget() {
-    return this.budget;
-  }
+ 
 }

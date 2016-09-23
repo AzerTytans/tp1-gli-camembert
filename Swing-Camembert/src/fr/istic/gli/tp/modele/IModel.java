@@ -2,7 +2,9 @@ package fr.istic.gli.tp.modele;
 
 import java.util.List;
 
-public interface IModel {
+import fr.istic.gli.tp.observateur.IObservateur;
+
+public interface IModel{
   /**
    * Liste d'item
    * @param item
@@ -17,6 +19,13 @@ public interface IModel {
    */
   public void setTitre(String titre);
   public String getTitre();
+
+  public void changementTable(Item i, String action);
   
-  public int getBudget();
+  /**
+   * Observateur
+   */
+  public void ajouterObservateur(IObservateur observateur);
+  public void notifierObservateurs(String action);
+  public void supprimerObservateur(IObservateur observateur);
 }
