@@ -7,7 +7,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.JTextField;
 
 import fr.istic.gli.tp.controller.AddAction;
 import fr.istic.gli.tp.controller.Controller;
@@ -44,9 +43,6 @@ public class Main {
 
     JButton gauche = new JButton("<-");
     JButton droite = new JButton("->");
-    JTextField intitule = new JTextField("");
-    JTextField desc = new JTextField("");
-    JTextField valeur = new JTextField("");
     Camembert vue = new Camembert(imodel, icontroller, gauche, droite);
     icontroller.setVue(vue);
     JFrame jframe = new JFrame(model.getTitre());

@@ -8,6 +8,10 @@ import javax.swing.JTable;
 import fr.istic.gli.tp.modele.TableModel;
 
 public class RemoveAction extends AbstractAction{
+  /**
+   * 
+   */
+  private static final long serialVersionUID = 1L;
   private JTable tableau;
   private TableModel tab;
   

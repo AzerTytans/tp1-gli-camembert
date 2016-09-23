@@ -1,12 +1,16 @@
 package fr.istic.gli.tp.modele;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.table.AbstractTableModel;
 
 public class TableModel extends AbstractTableModel{
+  /**
+   * 
+   */
+  private static final long serialVersionUID = 1L;
+
   /**
    * Parti utilsé pour la JTable
    */
