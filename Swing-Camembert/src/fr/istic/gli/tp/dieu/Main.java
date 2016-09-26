@@ -49,7 +49,6 @@ public class Main {
     imodel.ajouterObservateur(vue);
 
 
-
     /**
      * JTable
      */
@@ -60,7 +59,6 @@ public class Main {
     JPanel boutons = new JPanel();
     boutons.add(new JButton(new AddAction(tab)));
     boutons.add(new JButton(new RemoveAction(tableau, tab)));
-
 
 
     /**
